@@ -19,14 +19,12 @@ export default function RootLayout({
 }): JSX.Element {
   return (
     <html lang="en">
-      <Providers>
-        
-        <body className={inter.className}>
-        <AppbarClient></AppbarClient>
+      <body className={inter.className}>
+        <Providers>
+          <AppbarClient />
           {children}
-          
-          </body>
-      </Providers>
+        </Providers>
+      </body>
     </html>
   );
 }

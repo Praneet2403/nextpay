@@ -1,0 +1,13 @@
+"use client";
+
+import { useEffect } from "react";
+import { initPostHog } from "./posthog-client";
+
+// Boots PostHog on the client so exceptions are captured.
+export function Providers({ children }: { children: React.ReactNode }) {
+  useEffect(() => {
+    initPostHog();
+  }, []);
+
+  return <>{children}</>;
+}
